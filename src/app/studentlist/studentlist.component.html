@@ -1,0 +1,30 @@
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Maths</th>
+    <th>Science</th>
+    <th>Total Marks</th>
+    <th>Result</th>
+  </tr>
+  <tr *ngFor="let item of x, let i = index">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.email}}</td>
+    <!-- <td>{{item.marks}}</td> -->
+    <td>{{item.maths}}</td>
+    <td>{{item.science}}</td>
+    <td>{{item.science+item.maths}}</td>
+    <ng-container *ngIf="(item.science+item.maths)/2>33; else other">
+      <td>Pass</td>
+
+    </ng-container>
+    <ng-template #other>
+      <td>fail</td>
+    </ng-template>
+    <td><button class="btn btn-danger text-dark bg-danger   " (click)="del(i)">delete</button></td>
+    <td><button class="btn btn-primary text-dark bg-primary" (click)="patch(i)">patch</button></td>
+  </tr>
+
+</table>

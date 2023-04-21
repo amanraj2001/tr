@@ -1,0 +1,28 @@
+<p>student works!</p>
+<div class="container">
+
+  <form [formGroup]="form">
+
+    <label for="">ID</label>
+    <input type="text" formControlName="id" class="form-control">
+    <label for="">Name</label>
+    <input type="text" formControlName="name" class="form-control">
+    <label for="">Email</label>
+    <input type="text" formControlName="email" class="form-control">
+    <label for="">maths</label>
+    <input type="number" formControlName="maths" class="form-control">
+    <label for="">science</label>
+    <input type="number" formControlName="science" class="form-control">
+    <!-- <label for="">Marks</label>
+    <input type="text" formControlName="marks"  class="form-control"> -->
+    <!-- <label for="">Result</label>
+
+    <input type="text"  formControlName="result" class="form-control"> -->
+  </form>
+  <div class="d-flex gap-3 mt-2">
+
+    <button class="btn btn-primary"  (click)="addData()">add data</button>
+    <button class="btn btn-success" (click)="update()">update</button>
+  </div>
+</div>
+
